@@ -598,8 +598,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   movSpeed: 10
-  movAccel: 50
+  movAccel: 85
   moveActionReference: {fileID: -1680190386980627800, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  dashActionReference: {fileID: -7113849967484176863, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  dashSpeed: 45
+  dashDuration: 0.15
+  dashCooldown: 1.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
