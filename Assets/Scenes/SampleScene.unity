@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 127469555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.7, y: -1.48, z: 0}
+  m_LocalPosition: {x: 9.13, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -768,7 +768,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.55, y: 1.55}
+  m_Size: {x: 1.7, y: 1.7}
   m_EdgeRadius: 0
 --- !u!1 &619394800
 GameObject:
@@ -1081,8 +1081,8 @@ MonoBehaviour:
   - {fileID: 1365567925}
   - {fileID: 1859601184}
   startingSpawnInterval: 4
-  minimumSpawnInterval: 0.5
-  spawnRateIncrease: 0.09
+  minimumSpawnInterval: 0.25
+  spawnRateIncrease: 0.1
   startingMaxEnemies: 10
   maximumEnemies: 50
   maxEnemiesIncrease: 1
@@ -4833,6 +4833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9007860455364131398, guid: 60662152a20df2d4ea7a143b9757ce90, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6139,7 +6143,7 @@ Transform:
   m_GameObject: {fileID: 2052147732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.37, y: -0.34, z: 0}
+  m_LocalPosition: {x: -9.46, y: -2.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
