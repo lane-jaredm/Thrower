@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour
     private float dashTimeRemaining;
     private float dashCooldownRemaining;
 
+    public float DashCooldownRemaining =>
+    Mathf.Max(0f, dashCooldownRemaining);
+
+    public float DashCooldown => dashCooldown;
 
 
     private void Awake()

@@ -65,12 +65,14 @@ public class PlayerInteraction : MonoBehaviour
             return;
 
         heldObject = carryable;
+        heldObject.SetThrown(false);
+
         heldObject.Rigidbody.linearVelocity = Vector2.zero;
         heldObject.Rigidbody.angularVelocity = 0f;
         heldObject.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
     }
 
-    private void OnThrowPerformed(InputAction.CallbackContext context)
+private void OnThrowPerformed(InputAction.CallbackContext context)
 {
     if (heldObject == null || playerAim == null)
         return;
@@ -78,21 +80,21 @@ public class PlayerInteraction : MonoBehaviour
     CarryableObj objectToThrow = heldObject;
     heldObject = null;
 
-    Vector2 throwDirection = playerAim.AimDirection.normalized;
+    Vector2 throwDirection =
+        playerAim.AimDirection.normalized;
 
-    if (throwDirection == Vector2.zero)
-        throwDirection = transform.right;
-
+    objectToThrow.SetThrown(true);
     objectToThrow.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
     objectToThrow.Rigidbody.linearVelocity =
         throwDirection * throwForce;
 }
 
-    private void DropObject()
-    {
-        heldObject.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
-        heldObject = null;
-    }
+private void DropObject()
+{
+    heldObject.SetThrown(false);
+    heldObject.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
+    heldObject = null;
+}
 
     private void OnDrawGizmosSelected()
     {
